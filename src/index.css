@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: white;
+}
+
+.card-bg-desktop {
+  background-image: url("./assets/bg-main-desktop.png");
+}
+
+.card-display-back {
+  background-image: url("./assets/bg-card-back.png");
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-70%, -70%);
+}
+.card-display-front {
+  background-image: url("./assets/bg-card-front.png");
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-20%, -20%);
+}
+
+@media (max-width: 375px) {
+  .card-display-back {
+    height: 150px;
+    width: calc(16 / 9 * 150px);
+    top: 10%;
+    left: 70%;
+    transform: translate(-70%, -10%);
+  }
+  .card-display-front {
+    height: 150px;
+    width: calc(16 / 9 * 150px);
+    top: 60%;
+    left: 30%;
+    transform: translate(-30%, -60%);
+  }
+}
